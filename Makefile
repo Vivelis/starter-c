@@ -5,33 +5,34 @@
 ## Makefile
 ##
 
+## path to scripts
 SRC	=	prog/path.c
+MAIN	=	main/prog/path.c
+TEST	=	tests/path.c
 
+## path to lib file
 LIBPATH	=	./lib/
 
+## lib name
 LIBNAME	=	my
 
-MAIN	=	main/prog/path.c
-
+## binaries names
 EXEC	=	exec_name
-
 DEBUGBIN	=	debug
-
 TESTBIN	=	unit_test
 
-TEST	=	tests/path.c
 
 #-------------------------------------------------------------
 #DO NOT EDIT BELOW THIS LINE
 #-------------------------------------------------------------
 
-subsystem:
-	cd $(LIBPATH) && $(MAKE)
-
 $(EXEC): subsystem
 	gcc -o $(EXEC) $(SRC) $(MAIN) -L$(LIBPATH) -l$(LIBNAME)
 
 all: $(EXEC)
+
+subsystem:
+	cd $(LIBPATH) && $(MAKE)
 
 clean:
 	rm -f *#
