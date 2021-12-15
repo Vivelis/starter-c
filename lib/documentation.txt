@@ -36,20 +36,24 @@ EXAMPLES
 --------------------------------------------------------------------------------
 
 NAME
-    my_puterror - print a string in stderr and exit
+    my_puterror - print a string in stderr.
 
 SYNOPSIS
     #include "lib/headers/my.h"
     
-    void my_puterr(char const *str);
+    int my_puterror(char const *str, int error_num);
     
 DESCRIPTION
-    The my_putstr() function print the string in the str arg in the error output.
-    The fct finaly exit 84;
+    The my_puterror() function print the string in the str arg in the error output and return the error_num.
+
+RETURN
+    - return error_num if everything is ok.
+    - return 84 is their is a problem.
 
 EXAMPLES
-    my_putstr("error: bad arg")
-    my_putstr print "error: bad arg"
+    return my_puterror("error: bad arg", 84)
+    my_puterror print "error: bad arg"
+    my_puterror return 84
 
 --------------------------------------------------------------------------------
 
@@ -77,22 +81,26 @@ EXAMPLES
 --------------------------------------------------------------------------------
 
 NAME
-    do_strmalloc - locate a sub-string
+    do_strmalloc - malloc a string
 
 SYNOPSIS
     #include "lib/my/my.h"
     #include <stdlib.h>
     
-    char *do_strmalloc(char *str, ssize_t size);
+    int do_strmalloc(char **str, ssize_t size);
 
 DESCRIPTION
     The do_strmalloc() function allocate memory space for the given string to the
     size given in parameter.
 
+RETURN
+    - return 0 if all is ok.
+    - return 84 if their is a problem.
+
 EXAMPLES
     char *str = NULL;
     ssize_t size = 3;
-    do_strmalloc(str, size);
+    if (do_strmalloc(&str, size) != 84);
     :str is malloc for 4 char lenght
 
 --------------------------------------------------------------------------------

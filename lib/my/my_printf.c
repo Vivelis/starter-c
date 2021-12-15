@@ -18,5 +18,7 @@ int my_printf(const char *format, ...)
 
     va_start(ap, format);
     printed = find_flag(format, ap);
+    if (printed <= -1)
+        return 84;
     return printed;
 }

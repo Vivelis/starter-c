@@ -19,7 +19,7 @@ typedef struct fct_array_s {
     ffct_t *first;
 }fct_array_t;
 
-void insert(fct_array_t *fct_array, char flag, int (*fct) (va_list));
+int insert(fct_array_t *fct_array, char flag, int (*fct) (va_list));
 fct_array_t *initialisation(void);
 fct_array_t *init_fct_array(void);
 void free_fct_array(fct_array_t *fct_array);

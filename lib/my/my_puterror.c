@@ -8,11 +8,15 @@
 #include "../headers/my.h"
 #include <unistd.h>
 
-void my_puterror(char *str)
+int my_puterror(char *str, int error_num)
 {
     int len = 0;
 
+    if (!str) {
+        write(2, "error: missing str for my_puterror", 35);
+        return 84;
+    }
     len = my_strlen(str);
     write(2, str, len);
-    exit(84);
+    return error_num;
 }
