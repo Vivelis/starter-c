@@ -10,8 +10,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-static const char flags_array[] = "#0- +%diouxXbcsSp";
-
 static int browse_flagarray(char *flag, int f, fct_array_t *fct_a, va_list ap)
 {
     ffct_t *last = fct_a->first;
@@ -36,6 +34,8 @@ static int call_converter(char *flag, va_list ap)
     fct_array_t *fct_array = init_fct_array();
     int printed = 0;
 
+    if (!fct_array)
+        return my_puterror("error: can't initialize fct_array", -1);
     for (int f = 0; flag[f] != '\0'; f++) {
         printed += browse_flagarray(flag, f, fct_array, ap);
     }
@@ -45,6 +45,8 @@ static int call_converter(char *flag, va_list ap)
 
 int isflag(char c)
 {
+    const char flags_array[] = "#0- +%diouxXbcsSp";
+
     for (int index = 0; flags_array[index] != '\0'; index++) {
         if (flags_array[index] == c) {
             return index;
@@ -69,7 +71,7 @@ char *find_flag_type(const char *str, int *index)
         len++;
     flag = malloc(sizeof(char) * (len + 1));
     if (flag == NULL)
-        exit(84);
+        return NULL;
     for (int x = 0; x < len; x++) {
         *index = *index + x;
         flag[x] = str[*index];
@@ -86,6 +88,8 @@ int find_flag(const char *format, va_list ap)
         if (format[i] == '%') {
             i++;
             flag = find_flag_type(format, &i);
+            if (!flag)
+                return my_puterror("error: bad flag", -1);
             printed += call_converter(flag, ap);
             free(flag);
             flag = NULL;

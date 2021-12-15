@@ -10,6 +10,7 @@
     #define _LOW_CHAR_ (str[index - 1] >= 'a' && str[index - 1] <= 'z')
     #define _NUM_ (str[index - 1] >= '0' && str[index - 1] <= '9')
     #include <stdlib.h>
+
 void my_putchar(char c);
 char *my_strstr(char *str, char const *to_find);
 int my_isneg(int nb);
@@ -51,6 +52,6 @@ int my_revstrtol(char *str, int *start);
 char *my_inttos(int nbr);
 int my_intlen(int nbr);
 int my_printf(const char *format, ...);
-void my_puterror(char *str);
-void do_strmalloc(char *str, ssize_t size);
+int my_puterror(char *str, int error_num);
+int do_strmalloc(char **str, long size);
 #endif
