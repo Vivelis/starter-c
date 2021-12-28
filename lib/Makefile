@@ -52,9 +52,10 @@ SRC	=	my/my_compute_power_rec.c	\
 		my/my_printf_fctarr.c		\
 		my/my_printf_sint.c 		\
 		my/my_printf_usint.c		\
-		my/my_printf_usint2.c		\
+		my/my_printf_usinthex.c		\
 		my/my_printf_char.c			\
 		my/my_printf_point.c		\
+		my/my_printf_setflag.c		\
 		my/do_strmalloc.c			\
 		my/my_printf_flag_detection.c
 
@@ -65,14 +66,12 @@ SRCEXT      := c
 OBJEXT      := o
 
 #flags
-CFLAGS      := -Wall 
+CFLAGS      := -Wall
 
-#-------------------------------------------------------------
+#------------------------------------------------------------------------------
 #DO NOT EDIT BELOW THIS LINE
-#-------------------------------------------------------------
+#------------------------------------------------------------------------------
 
-#SOURCES		:= $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
-#OBJECTS		:= $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.$(OBJEXT))) 
 OBJ	=	$(SRC:.c=.o)
 
 $(LIB): $(OBJ)

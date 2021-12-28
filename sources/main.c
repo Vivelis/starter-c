@@ -5,7 +5,7 @@
 ** main.c
 */
 
-#include "lib/headers/my.h"
+#include "../lib/headers/my.h"
 
 int main(void)
 {

@@ -15,11 +15,11 @@ int do_strmalloc(char **str, ssize_t size)
 
     if (size <= 0) {
         *str = NULL;
-        return my_puterror("error: bad size", 84);
+        return my_puterror("error: bad size\n", 84);
     }
     if (!str) {
         *str = NULL;
-        return my_puterror("error: malloc have failed", 84);
+        return my_puterror("error: malloc have failed\n", 84);
     }
     return 0;
 }

@@ -47,18 +47,18 @@ fct_array_t *init_fct_array(void)
 
     if (!fct_array)
         return NULL;
-    insert(fct_array, 'd', disp_sint);
-    insert(fct_array, 'i', disp_sint);
-    insert(fct_array, 'o', disp_o_usint);
-    insert(fct_array, 'u', disp_u_usint);
-    insert(fct_array, 'x', disp_x_usint);
-    insert(fct_array, 'X', disp_majx_usint);
-    insert(fct_array, 'b', disp_binar);
-    insert(fct_array, 'c', disp_char);
-    insert(fct_array, 's', disp_string);
-    insert(fct_array, 'S', disp_printable_str);
-    insert(fct_array, 'p', disp_pointer);
-    insert(fct_array, '%', disp_pourcent);
+    insert(fct_array, 'd', &disp_sint);
+    insert(fct_array, 'i', &disp_sint);
+    insert(fct_array, 'o', &disp_o_usint);
+    insert(fct_array, 'u', &disp_u_usint);
+    insert(fct_array, 'x', &disp_x_usint);
+    insert(fct_array, 'X', &disp_majx_usint);
+    insert(fct_array, 'b', &disp_binar);
+    insert(fct_array, 'c', &disp_char);
+    insert(fct_array, 's', &disp_string);
+    insert(fct_array, 'S', &disp_printable_str);
+    insert(fct_array, 'p', &disp_pointer);
+    insert(fct_array, '%', &disp_pourcent);
     return fct_array;
 }
 

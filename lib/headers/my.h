@@ -43,7 +43,7 @@ char *my_revstr(char *str);
 char *my_strncat(char *dest, char const *src, int nb);
 int str_len(char *str);
 char *my_strdup(char const *src);
-void my_memset(char *s, int c, int n);
+void my_memset(char *s, char c, int n);
 int my_strtol(char *str, int *end_index);
 int unsigned_nbr_to_int(char *str_nbr);
 char *dup_nchar(char *str, int n);
