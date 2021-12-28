@@ -52,20 +52,20 @@ int my_strtol(char *str, int *end_index)
     int i = 0;
     char *str_nbr = NULL;
 
-    while (is_number(str[start]) == 0 && str[start] != '-') {
+    while (is_number(str[start]) == 0 && str[start] != '-')
         start++;
-    }
     if (str[i + start] == '-')
         i++;
-    while (str[i + start] != '\0' && is_number(str[i + start]) == 1) {
+    while (is_number(str[i + start]) == 1) {
         i++;
     }
-    *end_index += i + start - 1;
+    *end_index += (i + start - 1);
     str_nbr = dup_nchar(&str[start], i);
     if (str_nbr[0] == '-') {
         i = unsigned_nbr_to_int(&str_nbr[1]) * -1;
     } else {
         i = unsigned_nbr_to_int(str_nbr);
     }
+    free(str_nbr);
     return i;
 }

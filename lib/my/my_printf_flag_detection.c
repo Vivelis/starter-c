@@ -29,13 +29,15 @@ static int browse_flagarray(char *flag, int f, fct_array_t *fct_a, va_list ap)
     return 1;
 }
 
-static int call_converter(char *flag, va_list ap)
+int call_converter(char *flag, va_list ap)
 {
     fct_array_t *fct_array = init_fct_array();
     int printed = 0;
 
+    if (flag == NULL)
+        return my_puterror("error: flag is NULL\n", -1);
     if (!fct_array)
-        return my_puterror("error: can't initialize fct_array", -1);
+        return my_puterror("error: can't initialize fct_array\n", -1);
     for (int f = 0; flag[f] != '\0'; f++) {
         printed += browse_flagarray(flag, f, fct_array, ap);
     }
@@ -63,7 +65,8 @@ char *find_flag_type(const char *str, int *index)
 
     flag_index = isflag(str[*index]);
     if (flag_index == -1 ) {
-        flag = malloc(sizeof(char) * 2);
+        if ((flag = malloc(sizeof(char) * 2)) == NULL)
+            return NULL;
         flag[0] = str[*index];
         return flag;
     }
@@ -74,29 +77,7 @@ char *find_flag_type(const char *str, int *index)
         return NULL;
     for (int x = 0; x < len; x++) {
         *index = *index + x;
-        flag[x] = str[*index];
+        flag[x] = str[(*index)];
     }
     return flag;
-}
-
-int find_flag(const char *format, va_list ap)
-{
-    int printed = 0;
-    char *flag = NULL;
-
-    for (int i = 0; format[i] != '\0'; i++) {
-        if (format[i] == '%') {
-            i++;
-            flag = find_flag_type(format, &i);
-            if (!flag)
-                return my_puterror("error: bad flag", -1);
-            printed += call_converter(flag, ap);
-            free(flag);
-            flag = NULL;
-        } else {
-            my_putchar(format[i]);
-            printed++;
-        }
-    }
-    return printed;
 }

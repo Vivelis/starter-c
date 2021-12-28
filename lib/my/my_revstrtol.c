@@ -8,11 +8,22 @@
 #include "../headers/my.h"
 #include <stddef.h>
 
+static int conv_nbr(char *str_nbr)
+{
+    if (str_nbr[0] == '-') {
+        free(str_nbr);
+        return (unsigned_nbr_to_int(&str_nbr[1]) * -1);
+    } else {
+        free(str_nbr);
+        return (unsigned_nbr_to_int(str_nbr));
+    }
+}
+
 int my_revstrtol(char *str, int *start)
 {
     int result = 0;
     int len = 1;
-    char *str_nbr = NULL;
+    char str_nbr = NULL;
 
     while (is_number(str[*start]) == 0)
         *start -= 1;
@@ -26,9 +37,5 @@ int my_revstrtol(char *str, int *start)
             *start -= 1;
     }
     str_nbr = dup_nchar(&str[*start], len);
-    if (str_nbr[0] == '-')
-        result = unsigned_nbr_to_int(&str_nbr[1]) * -1;
-    else
-        result = unsigned_nbr_to_int(str_nbr);
-    return result;
+    return (conv_nbr(str_nbr));
 }

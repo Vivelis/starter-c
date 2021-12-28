@@ -13,7 +13,7 @@ int my_puterror(char *str, int error_num)
     int len = 0;
 
     if (!str) {
-        write(2, "error: missing str for my_puterror", 35);
+        write(2, "error: missing str for my_puterror\n", 36);
         return 84;
     }
     len = my_strlen(str);
