@@ -14,10 +14,10 @@ char is_number(char input)
 {
     if (input <= '9') {
         if (input >= '0') {
-            return 1;
+            return 'y';
         }
     }
-    return 0;
+    return 'n';
 }
 
 char *dup_nchar(char *str, int n)
@@ -52,11 +52,11 @@ int my_strtol(char *str, int *end_index)
     int i = 0;
     char *str_nbr = NULL;
 
-    while (is_number(str[start]) == 0 && str[start] != '-')
+    while (is_number(str[start]) == 'n' && str[start] != '-')
         start++;
     if (str[i + start] == '-')
         i++;
-    while (is_number(str[i + start]) == 1) {
+    while (is_number(str[i + start]) == 'y') {
         i++;
     }
     *end_index += (i + start - 1);

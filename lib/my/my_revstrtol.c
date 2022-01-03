@@ -25,9 +25,9 @@ int my_revstrtol(char *str, int *start)
     int len = 1;
     char str_nbr = NULL;
 
-    while (is_number(str[*start]) == 0)
+    while (is_number(str[*start]) == 'n')
         *start -= 1;
-    while (*start > 0 && is_number(str[*start]) == 1) {
+    while (*start > 0 && is_number(str[*start]) == 'y') {
         *start -= 1;
         len++;
     }
