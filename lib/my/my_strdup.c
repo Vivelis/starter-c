@@ -10,13 +10,15 @@
 
 char *my_strdup(char const *src)
 {
-    char *res;
-    int lenght;
+    char *res = NULL;
+    int lenght = 0;
 
+    if (src == NULL)
+        return NULL;
     lenght = my_strlen(src);
-    res = malloc(sizeof(char) * (lenght + 1));
-    for (int i = 0; i < lenght; i++) {
+    if ((res = malloc(sizeof(char) * (lenght + 1))) == NULL)
+        return NULL;
+    for (int i = 0; i <= lenght; i++)
         res[i] = src[i];
-    }
     return res;
 }

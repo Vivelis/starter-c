@@ -301,18 +301,18 @@ SYNOPSIS
     char is_number(char input);
 
 DESCRIPTION
-    The is_number() function return 1 if the char in input is a number,
-    else it return 0.
+    The is_number() function return 'y' if the char in input is a number,
+    else it return 'n'.
 
 RETURN
-    Return 1 if it is a number else return 0.
+    Return 'y' if it is a number else return 'n'.
 
 EXAMPLE
     input = '1'
-    return : 1
+    return : 'y'
 
     input = 'a'
-    return : 0
+    return : 'n'
 
 --------------------------------------------------------------------------------
 
