@@ -1,0 +1,16 @@
+name: NorMatrix
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: clone NorMatrix
+      run: git clone https://github.com/Saverio976/NorMatrix.git
+
+    - name: NorMatrix
+      run: ./NorMatrix/main.py
