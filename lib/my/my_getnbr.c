@@ -15,7 +15,7 @@ static int my_cond(int cmpt, char const *str)
             result *= -1;
             return result;
         }
-        if (result + unit >= 2147483646 || result + unit <= -2147483647){
+        if (result + unit >= 2147483646 || result + unit <= -2147483647) {
             return 0;
         }
         result += unit * (str[cmpt] - 48);
@@ -30,11 +30,10 @@ int my_getnbr(char const *str)
     int cmpt = 0;
 
     while (!(str[cmpt] >= '0' && str[cmpt] <= '9')) {
-        if (str[cmpt] == '\0') {
+        if (str[cmpt] == '\0')
             return 0;
-        } else {
+        else
             cmpt++;
-        }
     }
     while (str[cmpt] >= '0' && str[cmpt] <= '9') {
         cmpt++;
