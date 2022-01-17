@@ -6,23 +6,21 @@
 ##
 
 ## path for each scripts
-SRC		=	
-TEST	=	tests/test.c
-MAIN	=	sources/main.c
+SRC		=	sources/prog/path.c
+TEST	=	tests/path.c
+MAIN	=	sources/main/prog/path.c
 
-## path to acced the lib file
-LIBPATH	=	./lib/
-
-## name of the lib
+## import lib options
+LIBPATH	=	./sources/lib/
 LIBNAME	=	my
 
 ## name of the binaries
-EXEC	=	exec_name
+EXEC		=	exec_name
 DEBUGBIN	=	debug
-TESTBIN	=	unit_test
+TESTBIN		=	unit_test
 
 ## flags
-CFLAG	=	-W
+CFLAG		=	-W
 DEBUGFLAG	=	-g3 -Wall -Wextra
 TESTFLAG	=	-lcriterion
 
@@ -44,6 +42,8 @@ clean:
 
 fclean: clean
 	rm -f $(EXEC)
+	rm -f $(DEBUGBIN)
+	rm -f $(TESTBIN)
 	cd $(LIBPATH) && $(MAKE) fclean
 
 re: fclean all
