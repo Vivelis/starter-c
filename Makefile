@@ -24,7 +24,7 @@ TESTBIN		=	unit_test
 ## flags
 CFLAGS		=	-Wextra -Wall $(addprefix -I, $(INCLUDEPATH))
 LDFLAGS		=	$(addprefix -L, $(dir $(LIBS)))\
-				$(addprefix -l, $($(basename $(notdir $(LIBS))):%lib=%))
+				$(addprefix -l, $(subst lib,,$(basename $(notdir $(LIBS)))))
 DEBUGFLAGS	=	-g3
 TESTFLAGS	=	-lcriterion
 
