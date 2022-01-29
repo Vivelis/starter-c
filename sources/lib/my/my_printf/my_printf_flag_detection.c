@@ -65,8 +65,7 @@ char *find_flag_type(const char *str, int *index)
 
     flag_index = isflag(str[*index]);
     if (flag_index == -1 ) {
-        if ((flag = malloc(sizeof(char) * 2)) == NULL)
-            return NULL;
+        flag = malloc(sizeof(char) * 2);
         flag[0] = str[*index];
         return flag;
     }

@@ -63,3 +63,7 @@ dkms.conf
 exec_name
 debug
 unit_test
+
+#headers
+includes/my.h
+includes/printf_header.h
