@@ -14,7 +14,7 @@ char my_str_isprintable(char *str)
         return 'e';
     }
     for (int i = 0; str[i] != '\0'; i++) {
-        if(str[i] > ' ')
+        if (str[i] > ' ')
             return 'n';
     }
     return 'y';

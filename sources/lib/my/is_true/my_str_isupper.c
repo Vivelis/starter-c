@@ -14,9 +14,9 @@ char my_str_isupper(char *str)
         return 'e';
     }
     for (int i = 0; str[i] != '\0'; i++) {
-        if(str[i] < 'A')
+        if (str[i] < 'A')
             return 'n';
-        if(str[i] > 'Z')
+        if (str[i] > 'Z')
             return 'n';
     }
     return 'y';

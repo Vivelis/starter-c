@@ -14,9 +14,9 @@ char my_str_islower(char *str)
         return 'e';
     }
     for (int i = 0; str[i] != '\0'; i++) {
-        if(str[i] < 'a')
+        if (str[i] < 'a')
             return 'n';
-        if(str[i] > 'z')
+        if (str[i] > 'z')
             return 'n';
     }
     return 'y';

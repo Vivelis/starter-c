@@ -144,12 +144,12 @@ EXAMPLES
 --------------------------------------------------------------------------------
 
 NAME
-    my_put_nbr - 
+    my_putnbr - 
 
 SYNOPSIS
     #include "lib/my/my.h"
     
-    int my_put_nbr(int nb);
+    int my_putnbr(int nb);
 
 DESCRIPTION
 

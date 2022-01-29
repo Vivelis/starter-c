@@ -58,3 +58,8 @@ dkms.conf
 *~
 \#*
 *#
+
+#binaries
+exec_name
+debug
+unit_test
