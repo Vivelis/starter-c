@@ -2,12 +2,10 @@
 ** EPITECH PROJECT, 2021
 ** starter-c
 ** File description:
-** main.c
+** prog.c
 */
 
-#include "header.h"
-
-int main(void)
+int exemple_prog(int arg)
 {
-    return 0;
+    return arg;
 }

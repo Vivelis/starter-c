@@ -1,0 +1,780 @@
+﻿					LIBMY   DOCUMENTATION
+
+
+NAME
+    my_putchar - print a character
+
+SYNOPSIS
+    #include "lib/headers/my.h"
+    
+    void my_putchar(char c);
+    
+DESCRIPTION
+    The my_putchar() function print the char in the c arg in the standard output.
+
+EXAMPLES
+    c = 'A'
+    my_putchar print "A"
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_putstr - print a string
+
+SYNOPSIS
+    #include "lib/headers/my.h"
+    
+    void my_putstr(char const *str);
+    
+DESCRIPTION
+    The my_putstr() function print the string in str arg in the standard output.
+
+EXAMPLES
+    my_putstr("coucou")
+    my_putstr print "coucou"
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_puterror - print a string in stderr.
+
+SYNOPSIS
+    #include "lib/headers/my.h"
+    
+    int my_puterror(char const *str, int error_num);
+    
+DESCRIPTION
+    The my_puterror() function print the string in the str arg in the error output and return the error_num.
+
+RETURN
+    - return error_num if everything is ok.
+    - return 84 is their is a problem.
+
+EXAMPLES
+    return my_puterror("error: bad arg", 84)
+    my_puterror print "error: bad arg"
+    my_puterror return 84
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strstr - locate a sub-string
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strstr(char *str, char const *to_find);
+
+DESCRIPTION
+    The my_strstr() function finds the first occurrence of the sub-string to_find
+    int the string str. The terminating null bytes ('\0') are not compared.
+
+RETURN
+    The function return a pointer to the beginning of the located sub-string, or 
+    NULL if the sub-string is not found.
+
+EXAMPLES
+    str = "bcd"
+    to_find = "abcd"
+    return : &to_find[1]
+
+--------------------------------------------------------------------------------
+
+NAME
+    do_strmalloc - malloc a string
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    #include <stdlib.h>
+    
+    int do_strmalloc(char **str, ssize_t size);
+
+DESCRIPTION
+    The do_strmalloc() function allocate memory space for the given string to the
+    size given in parameter.
+
+RETURN
+    - return 0 if all is ok.
+    - return 84 if their is a problem.
+
+EXAMPLES
+    char *str = NULL;
+    ssize_t size = 3;
+    if (do_strmalloc(&str, size) != 84);
+    :str is malloc for 4 char lenght
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strcmp - malloc a string
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_strcmp(char const *s1, char const *s2);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strncmp - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_strncmp(char const *s1, char const *s2, int n);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_putnbr - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_putnbr(int nb);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+
+NAME
+    my_swap - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    void my_swap(int *a, int *b);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strupcase - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strupcase(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strlowcase - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strlowcase(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strlen - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_strlen(char const *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strcapitalize - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strcapitalize(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_getnbr - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_getnbr(char const *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_sort_int_array - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    void my_sort_int_array(int *tab, int size);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_str_isnum - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char my_str_isnum(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_compute_power_rec - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_compute_power_rec(int nb, int power);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_str_isupper - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char my_str_isupper(char *str);NAME
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_str_islower - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char my_str_islower(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_compute_square_root - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_compute_square_root(int nb);NAME
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_is_prime - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char my_is_prime(int nb);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_str_isprintable - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char my_str_isprintable(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_find_prime_sup - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_find_prime_sup(int nb);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strcpy - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strcpy(char *dest, char const *src);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+NAME
+    my_strncpy - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strncpy(char *dest, char const *src, int n);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strcat - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strcat(char *dest, char const *src);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+NAME
+    my_strncat - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strncat(char *dest, char const *src, int nb);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_revstr - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_revstr(char *str);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+NAME
+    my_strdup - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strdup(char const *src);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+NAME
+    memset - fill memory with a constant byte
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    void my_memset(char *s, int c, int n);
+
+DESCRIPTION
+    The  my_memset()  function  fills  the  first  n  bytes of the memory area
+    pointed to by s with the constant byte c.
+
+EXAMPLE
+
+
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_strtol - convert a string to an integer
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int my_strtol(char *str, char **endptr);
+
+DESCRIPTION
+    The  strtol()  function converts the initial part of the string in nptr
+    to a long integer value according to the given base, which must be  be‐
+    tween 2 and 36 inclusive, or be the special value 0.
+
+    The string may begin with an arbitrary amount of white space (as deter‐
+    mined by isspace(3)) followed by a single optional '+' or '-' sign.  If
+    base  is zero or 16, the string may then include a "0x" or "0X" prefix,
+    and the number will be read in base 16; otherwise, a zero base is taken
+    as  10  (decimal) unless the next character is '0', in which case it is
+    taken as 8 (octal).
+
+    The remainder of the string is converted to a long value in the obvious
+    manner,  stopping  at the first character which is not a valid digit in
+    the given base.  (In bases above 10, the letter 'A' in either uppercase
+    or  lowercase  represents 10, 'B' represents 11, and so forth, with 'Z'
+    representing 35.)
+
+    If endptr is not NULL, strtol() stores the address of the first invalid
+    character  in *endptr.  If there were no digits at all, strtol() stores
+    the original value of nptr in *endptr (and returns 0).  In  particular,
+    if  *nptr is not '\0' but **endptr is '\0' on return, the entire string
+    is valid.
+
+    The strtoll() function works just like the strtol()  function  but  re‐
+    turns a long long integer value.
+
+RETURN
+    The  strtol() function returns the result of the conversion, unless the
+    value would underflow or overflow.  If an  underflow  occurs,  strtol()
+    returns  LONG_MIN.   If  an overflow occurs, strtol() returns LONG_MAX.
+    In both cases, errno is set to ERANGE.  Precisely the  same  holds  for
+    strtoll()  (with  LLONG_MIN  and  LLONG_MAX  instead  of  LONG_MIN  and
+    LONG_MAX).
+       
+EXAMPLE
+    str = '123'
+    return : 123
+    
+    str = '123'
+    returned : 123
+    
+    str = '123abc'
+    return : 123
+    
+    123abc 55
+    print : Invalid argument
+    
+    str = ''
+    print : No digits were found
+
+    str = 4000000000
+    print : Numerical result out of range
+
+--------------------------------------------------------------------------------
+
+NAME
+    unsigned_nbr_to_int - return the string parameter into int
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    int unsigned_nbr_to_int(char *str_nbr);
+
+DESCRIPTION
+    The unsigned_nbr_to_int() return an int corresponding to the string in 
+    the str_nbr parameter.
+
+RETURN
+    Return an int
+
+EXAMPLE
+
+
+--------------------------------------------------------------------------------
+
+NAME
+    dup_nchar
+
+SYNOPSIS
+    #include "lib/my/my.h"
+
+    char *dup_nchar(char *str, int n);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLE
+
+--------------------------------------------------------------------------------
+
+NAME
+    is_number - return if it is a number or not
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char is_number(char input);
+
+DESCRIPTION
+    The is_number() function return 'y' if the char in input is a number,
+    else it return 'n'.
+
+RETURN
+    Return 'y' if it is a number else return 'n'.
+
+EXAMPLE
+    input = '1'
+    return : 'y'
+
+    input = 'a'
+    return : 'n'
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_revstrtol
+
+SYNOPSIS
+    int revstrtol(char *str)
+
+--------------------------------------------------------------------------------
+
+NAME
+    my_inttos
+
+SYNOPSIS
+    char *my_inttos(int nbr)
+    
+--------------------------------------------------------------------------------
+
+NAME
+    my_printf
+
+SYNOPSIS
+    #include "lib/my/my.h"
+
+    int my_printf(const char *format, ...)
+
+DESCRIPTION
+    The my_printf() function, write in the std output, the string format
+    filled with, the parameters positioned after the format string.
+    Theses parameters are filled following the format notation described bellow.
+
+    Flag characters :
+        The character % is followed by zero or more of the following flags:
+        -"#" : The  value  should  be  converted to an "alternate form".
+               ("%#o"= first character of the output string is zero)
+               ("%#x, X"= a nonzero result has there string "0x"/"0X")
+               ("%#a, A, e, E, f, F, g, G"= the result will always contain a 
+                decimal point, for "g" and "G", the zeros are not removed)
+        -"0" : The value should be zero padded
+               (For "%0d, i, o, u, x, X, a, A, e, E, f, F, g, G"= converted 
+                value is padded  on the  left  with  zeros rather than blanks)
+        -"-" : The converted value is padded on the right with blanks.
+               (A - overrides a 0 if both are given.)
+        -" " : (a  space) A blank should be left before a positive number (or
+               empty string) produced by a signed conversion.
+        -"+" : A sign (+ or -) should always be placed before a number produced
+               by  a  signed  conversion.
+               (By default, a sign is used only for negative numbers)
+
+    Conversion specifiers :
+        A character that specifies the type of conversion to be  applied.   The
+        conversion specifiers and their meanings are :
+        -"d, i" : signed int.
+        -"o, u, x, X" : unsigned int (o=octal, u=decimal, x,Xhexadecimal)
+                        the letters "ABCDEF" are used with "X".
+	    -"b" : prints unsigned numbers in a binary base. 
+        -"c" : If no l modifier is present, the int argument is converted to an
+               unsigned char, and the resulting character is written.
+        -"s" : If no l modifier is present: the const char * argument  is
+		       expected to be a pointer to an array of character type.
+	    -"S" : prints a character string (like %s)
+	           (However, non-printable characters (ASCII value strictly smaller
+		        than 32 or greater or equal than 127) must be represented by a
+		        back-slash to be followed by the character’s value in octal base)
+        -"p" : The  void * pointer argument is printed in hexadecimal.
+        -"%" : a "%" is written.
+
+RETURN
+    Upon successful return, my_printf() return the number of characters
+    printed (excluding the null byte used to end output to strings).
+
+EXAMPLE
+    my_printf("il est %dh%o\n", 12, 42);
+    return : 15
+    print : "il est 12H42\n"
