@@ -6,18 +6,17 @@
 ** as argument.
 */
 
-int my_compute_square_root(int nb)
-{
-    int square_root = 1;
+int my_compute_square_root(int nb) {
+  int square_root = 1;
 
-    if (nb == 1) {
-        return 1;
+  if (nb == 1) {
+    return 1;
+  }
+  while (square_root < nb) {
+    if (square_root * square_root == nb) {
+      return square_root;
     }
-    while (square_root < nb) {
-        if (square_root * square_root == nb) {
-            return square_root;
-        }
-        square_root++;
-    }
-    return 0;
+    square_root++;
+  }
+  return 0;
 }

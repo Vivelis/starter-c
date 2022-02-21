@@ -5,15 +5,14 @@
 ** my_strupcase
 */
 
-char *my_strupcase(char *str)
-{
-    int index = 0;
+char *my_strupcase(char *str) {
+  int index = 0;
 
-    while (str[index] != '\0') {
-        if (str[index] >= 'a' && str[index] <= 'z') {
-            str[index] += 'a' - 'A';
-        }
-        index++;
+  while (str[index] != '\0') {
+    if (str[index] >= 'a' && str[index] <= 'z') {
+      str[index] += 'a' - 'A';
     }
-    return str;
+    index++;
+  }
+  return str;
 }

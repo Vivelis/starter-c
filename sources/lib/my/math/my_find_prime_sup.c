@@ -8,18 +8,17 @@
 
 #include "../../headers/my.h"
 
-int my_find_prime_sup(int nb)
-{
-    long temp = nb;
+int my_find_prime_sup(int nb) {
+  long temp = nb;
 
-    if (temp++ > 2147483647) {
-        return 0;
-    }
-    if (temp < 0) {
-        temp = 0;
-    }
-    while (my_is_prime(temp) == 0) {
-        temp++;
-    }
-    return nb;
+  if (temp++ > 2147483647) {
+    return 0;
+  }
+  if (temp < 0) {
+    temp = 0;
+  }
+  while (my_is_prime(temp) == 0) {
+    temp++;
+  }
+  return nb;
 }

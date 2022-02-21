@@ -5,7 +5,4 @@
 ** prog.c
 */
 
-int exemple_prog(int arg)
-{
-    return arg;
-}
+int exemple_prog(int arg) { return arg; }

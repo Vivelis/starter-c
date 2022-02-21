@@ -6,16 +6,15 @@
 ** return positive value if s1 greater than s2.
 */
 
-int my_strcmp(char const *s1, char const *s2)
-{
-    int s1_value = 0;
-    int s2_value = 0;
+int my_strcmp(char const *s1, char const *s2) {
+  int s1_value = 0;
+  int s2_value = 0;
 
-    for (int i = 0; s1[i] != '\0'; i++) {
-        s1_value += (int)s1[i];
-    }
-    for (int j = 0; s2[j] != '\0'; j++) {
-        s2_value += (int)s2[j];
-    }
-    return (s1_value - s2_value);
+  for (int i = 0; s1[i] != '\0'; i++) {
+    s1_value += (int)s1[i];
+  }
+  for (int j = 0; s2[j] != '\0'; j++) {
+    s2_value += (int)s2[j];
+  }
+  return (s1_value - s2_value);
 }

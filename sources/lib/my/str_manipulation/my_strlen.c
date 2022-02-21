@@ -8,13 +8,12 @@
 
 #include <stddef.h>
 
-size_t my_strlen(char const *str)
-{
-    size_t cmpt = 0;
+size_t my_strlen(char const *str) {
+  size_t cmpt = 0;
 
-    if (str == NULL)
-        return 0;
-    while (str[cmpt] != '\0')
-        cmpt++;
-    return cmpt;
+  if (str == NULL)
+    return 0;
+  while (str[cmpt] != '\0')
+    cmpt++;
+  return cmpt;
 }

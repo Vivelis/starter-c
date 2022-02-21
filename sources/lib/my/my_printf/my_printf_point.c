@@ -9,35 +9,32 @@
 #include <stdarg.h>
 #include <stddef.h>
 
-static int show_pointer(long nbr)
-{
-    int printed = 0;
+static int show_pointer(long nbr) {
+  int printed = 0;
 
-    if (nbr == 0) {
-        return 0;
-    }
-    printed += show_pointer(nbr / 16);
-    nbr %= 16;
-    if (nbr > 9)
-        nbr += 39;
-    my_putchar(nbr + '0');
-    printed++;
-    return printed;
+  if (nbr == 0) {
+    return 0;
+  }
+  printed += show_pointer(nbr / 16);
+  nbr %= 16;
+  if (nbr > 9)
+    nbr += 39;
+  my_putchar(nbr + '0');
+  printed++;
+  return printed;
 }
 
-int disp_pointer(va_list ap)
-{
-    void *ptr = NULL;
-    int printed = 0;
+int disp_pointer(va_list ap) {
+  void *ptr = NULL;
+  int printed = 0;
 
-    ptr = va_arg(ap, void *);
-    my_putstr("0x");
-    printed = show_pointer((long)ptr) + 2;
-    return printed;
+  ptr = va_arg(ap, void *);
+  my_putstr("0x");
+  printed = show_pointer((long)ptr) + 2;
+  return printed;
 }
 
-int disp_pourcent(va_list ap)
-{
-    my_putchar('%');
-    return 1;
+int disp_pourcent(va_list ap) {
+  my_putchar('%');
+  return 1;
 }
