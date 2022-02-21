@@ -32,7 +32,7 @@ int my_revstrtol(char *str, int *start)
     }
     if (*start > 0) {
         if (str[*start] == '-' &&
-            (str[*start - 1] == ' ' || str[*start - 1] == '('))
+                (str[*start - 1] == ' ' || str[*start - 1] == '('))
             *start -= 1;
     }
     str_nbr = dup_nchar(&str[*start], len);

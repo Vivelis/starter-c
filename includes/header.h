@@ -6,7 +6,7 @@
 */
 
 #ifndef _HEADER_H_
-    #define _HEADER_H_
+#define _HEADER_H_
 
 // my fcts
 void my_fct(void);

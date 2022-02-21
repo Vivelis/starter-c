@@ -6,8 +6,8 @@
 */
 
 #ifndef _PRINTF_HEADER_H_
-    #define _PRINTF_HEADER_H_
-    #include <stdarg.h>
+#define _PRINTF_HEADER_H_
+#include <stdarg.h>
 
 typedef struct ffct_s ffct_t;
 struct ffct_s {
@@ -17,7 +17,7 @@ struct ffct_s {
 };
 typedef struct fct_array_s {
     ffct_t *first;
-}fct_array_t;
+} fct_array_t;
 
 // my_printf_char.c
 int putstr_printable(char *str);

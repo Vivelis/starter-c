@@ -6,10 +6,10 @@
 */
 
 #ifndef MY_H_
-    #define MY_H_
-    #define _LOW_CHAR_ (str[index - 1] >= 'a' && str[index - 1] <= 'z')
-    #define _NUM_ (str[index - 1] >= '0' && str[index - 1] <= '9')
-    #include <stdlib.h>
+#define MY_H_
+#define _LOW_CHAR_ (str[index - 1] >= 'a' && str[index - 1] <= 'z')
+#define _NUM_ (str[index - 1] >= '0' && str[index - 1] <= '9')
+#include <stdlib.h>
 
 void my_putchar(char c);
 char *my_strstr(char *str, char const *to_find);
