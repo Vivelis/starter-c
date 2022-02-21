@@ -9,8 +9,8 @@
 SRC			=	sources/prog.c
 MAIN		=	sources/main.c
 TEST		=	tests/unit_test
-OBJ			=	$(SRC:.c=.o)\
-				$(MAIN:.c=.o)
+OBJ			=	$(SRC:.c=.o)
+MAINOBJ		=	$(MAIN:.c=.o)
 INCLUDEPATH	=	includes
 
 ## import lib options
@@ -42,7 +42,7 @@ $(CC)	=	gcc
 
 all: $(LIBS) $(EXEC)
 
-$(EXEC): $(OBJ)
+$(EXEC): $(OBJ) $(MAINOBJ)
 	@$(CC) -o $@ $^ $(LDFLAGS) $(CFLAGS)
 	@echo -e "\e[1;36mFinished compiling $@\e[0m"
 
@@ -53,6 +53,7 @@ clean:
 	@rm -f *#
 	@rm -f *~
 	@rm -f $(OBJ)
+	@rm -f $(MAINOBJ)
 	@printf "\e[0;33mDeleted all .o of $(EXEC)\e[0m\n"
 	@$(MAKE) -C $(dir $(LIBS)) clean
 	@echo -e "\e[1;36mDeleted all temporary files\e[0m"
@@ -67,8 +68,8 @@ fclean: clean
 
 re: fclean all
 
-debug: fclean $(LIBS) $(OBJ)
-	@$(CC) -o $(DEBUGBIN) $(OBJ) $(LDFLAGS) $(CFLAGS) $(DEBUGFLAGS)
+debug: fclean $(LIBS) $(OBJ) $(MAINOBJ)
+	@$(CC) -o $(DEBUGBIN) $(OBJ) $(MAINOBJ) $(LDFLAGS) $(CFLAGS) $(DEBUGFLAGS)
 	@echo -e "\e[1;36mFinished compiling $(DEBUGBIN) $@\e[0m"
 
 unit_tests: fclean $(LIBS) $(OBJ)
