@@ -6,9 +6,9 @@ NAME
 
 SYNOPSIS
     #include "lib/headers/my.h"
-    
+
     void my_putchar(char c);
-    
+
 DESCRIPTION
     The my_putchar() function print the char in the c arg in the standard output.
 
@@ -23,9 +23,9 @@ NAME
 
 SYNOPSIS
     #include "lib/headers/my.h"
-    
+
     void my_putstr(char const *str);
-    
+
 DESCRIPTION
     The my_putstr() function print the string in str arg in the standard output.
 
@@ -40,9 +40,9 @@ NAME
 
 SYNOPSIS
     #include "lib/headers/my.h"
-    
+
     int my_puterror(char const *str, int error_num);
-    
+
 DESCRIPTION
     The my_puterror() function print the string in the str arg in the error output and return the error_num.
 
@@ -62,7 +62,7 @@ NAME
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strstr(char *str, char const *to_find);
 
 DESCRIPTION
@@ -70,7 +70,7 @@ DESCRIPTION
     int the string str. The terminating null bytes ('\0') are not compared.
 
 RETURN
-    The function return a pointer to the beginning of the located sub-string, or 
+    The function return a pointer to the beginning of the located sub-string, or
     NULL if the sub-string is not found.
 
 EXAMPLES
@@ -86,7 +86,7 @@ NAME
 SYNOPSIS
     #include "lib/my/my.h"
     #include <stdlib.h>
-    
+
     int do_strmalloc(char **str, ssize_t size);
 
 DESCRIPTION
@@ -110,7 +110,7 @@ NAME
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_strcmp(char const *s1, char const *s2);
 
 DESCRIPTION
@@ -125,11 +125,11 @@ EXAMPLES
 --------------------------------------------------------------------------------
 
 NAME
-    my_strncmp - 
+    my_strncmp -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_strncmp(char const *s1, char const *s2, int n);
 
 DESCRIPTION
@@ -139,16 +139,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_putnbr - 
+    my_putnbr -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_putnbr(int nb);
 
 DESCRIPTION
@@ -158,17 +158,17 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 
 NAME
-    my_swap - 
+    my_swap -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     void my_swap(int *a, int *b);
 
 DESCRIPTION
@@ -178,16 +178,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_strupcase - 
+    my_strupcase -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strupcase(char *str);
 
 DESCRIPTION
@@ -197,16 +197,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_strlowcase - 
+    my_strlowcase -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strlowcase(char *str);
 
 DESCRIPTION
@@ -216,16 +216,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_strlen - 
+    my_strlen -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_strlen(char const *str);
 
 DESCRIPTION
@@ -235,16 +235,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_strcapitalize - 
+    my_strcapitalize -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strcapitalize(char *str);
 
 DESCRIPTION
@@ -254,16 +254,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_getnbr - 
+    my_getnbr -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_getnbr(char const *str);
 
 DESCRIPTION
@@ -273,16 +273,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_sort_int_array - 
+    my_sort_int_array -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     void my_sort_int_array(int *tab, int size);
 
 DESCRIPTION
@@ -292,16 +292,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_str_isnum - 
+    my_str_isnum -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char my_str_isnum(char *str);
 
 DESCRIPTION
@@ -311,16 +311,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_compute_power_rec - 
+    my_compute_power_rec -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_compute_power_rec(int nb, int power);
 
 DESCRIPTION
@@ -330,16 +330,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_str_isupper - 
+    my_str_isupper -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char my_str_isupper(char *str);NAME
 
 DESCRIPTION
@@ -349,16 +349,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_str_islower - 
+    my_str_islower -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char my_str_islower(char *str);
 
 DESCRIPTION
@@ -368,16 +368,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_compute_square_root - 
+    my_compute_square_root -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_compute_square_root(int nb);NAME
 
 DESCRIPTION
@@ -387,16 +387,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_is_prime - 
+    my_is_prime -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char my_is_prime(int nb);
 
 DESCRIPTION
@@ -406,16 +406,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_str_isprintable - 
+    my_str_isprintable -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char my_str_isprintable(char *str);
 
 DESCRIPTION
@@ -425,16 +425,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_find_prime_sup - 
+    my_find_prime_sup -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_find_prime_sup(int nb);
 
 DESCRIPTION
@@ -444,16 +444,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_strcpy - 
+    my_strcpy -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strcpy(char *dest, char const *src);
 
 DESCRIPTION
@@ -463,15 +463,15 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 NAME
-    my_strncpy - 
+    my_strncpy -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strncpy(char *dest, char const *src, int n);
 
 DESCRIPTION
@@ -481,16 +481,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_strcat - 
+    my_strcat -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strcat(char *dest, char const *src);
 
 DESCRIPTION
@@ -500,15 +500,15 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 NAME
-    my_strncat - 
+    my_strncat -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strncat(char *dest, char const *src, int nb);
 
 DESCRIPTION
@@ -518,16 +518,16 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
 NAME
-    my_revstr - 
+    my_revstr -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_revstr(char *str);
 
 DESCRIPTION
@@ -537,15 +537,15 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 NAME
-    my_strdup - 
+    my_strdup -
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char *my_strdup(char const *src);
 
 DESCRIPTION
@@ -555,7 +555,7 @@ RETURN
 
 
 EXAMPLES
-    
+
 
 --------------------------------------------------------------------------------
 
@@ -566,7 +566,7 @@ NAME
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     void my_memset(char *s, int c, int n);
 
 DESCRIPTION
@@ -584,7 +584,7 @@ NAME
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int my_strtol(char *str, char **endptr);
 
 DESCRIPTION
@@ -621,20 +621,20 @@ RETURN
     In both cases, errno is set to ERANGE.  Precisely the  same  holds  for
     strtoll()  (with  LLONG_MIN  and  LLONG_MAX  instead  of  LONG_MIN  and
     LONG_MAX).
-       
+
 EXAMPLE
     str = '123'
     return : 123
-    
+
     str = '123'
     returned : 123
-    
+
     str = '123abc'
     return : 123
-    
+
     123abc 55
     print : Invalid argument
-    
+
     str = ''
     print : No digits were found
 
@@ -648,11 +648,11 @@ NAME
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     int unsigned_nbr_to_int(char *str_nbr);
 
 DESCRIPTION
-    The unsigned_nbr_to_int() return an int corresponding to the string in 
+    The unsigned_nbr_to_int() return an int corresponding to the string in
     the str_nbr parameter.
 
 RETURN
@@ -686,7 +686,7 @@ NAME
 
 SYNOPSIS
     #include "lib/my/my.h"
-    
+
     char is_number(char input);
 
 DESCRIPTION
@@ -718,7 +718,7 @@ NAME
 
 SYNOPSIS
     char *my_inttos(int nbr)
-    
+
 --------------------------------------------------------------------------------
 
 NAME
@@ -739,10 +739,10 @@ DESCRIPTION
         -"#" : The  value  should  be  converted to an "alternate form".
                ("%#o"= first character of the output string is zero)
                ("%#x, X"= a nonzero result has there string "0x"/"0X")
-               ("%#a, A, e, E, f, F, g, G"= the result will always contain a 
+               ("%#a, A, e, E, f, F, g, G"= the result will always contain a
                 decimal point, for "g" and "G", the zeros are not removed)
         -"0" : The value should be zero padded
-               (For "%0d, i, o, u, x, X, a, A, e, E, f, F, g, G"= converted 
+               (For "%0d, i, o, u, x, X, a, A, e, E, f, F, g, G"= converted
                 value is padded  on the  left  with  zeros rather than blanks)
         -"-" : The converted value is padded on the right with blanks.
                (A - overrides a 0 if both are given.)
@@ -758,7 +758,7 @@ DESCRIPTION
         -"d, i" : signed int.
         -"o, u, x, X" : unsigned int (o=octal, u=decimal, x,Xhexadecimal)
                         the letters "ABCDEF" are used with "X".
-	    -"b" : prints unsigned numbers in a binary base. 
+	    -"b" : prints unsigned numbers in a binary base.
         -"c" : If no l modifier is present, the int argument is converted to an
                unsigned char, and the resulting character is written.
         -"s" : If no l modifier is present: the const char * argument  is
