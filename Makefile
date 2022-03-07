@@ -45,7 +45,7 @@ $(CC)	=	gcc
 
 all: do_libs $(EXEC)
 
-$(EXEC): $(OBJ)
+$(EXEC): $(OBJ) $(MAINOBJ)
 	@$(CC) -o $@ $^ $(LDFLAGS) $(CFLAGS)
 	@echo -e "\e[1;36mFinished compiling $@\e[0m"
 
