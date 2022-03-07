@@ -1,8 +1,8 @@
 name: NorMatrix
 
 on:
-  check_run:
-    types: [rerequested]
+  pull_request:
+    types: [opened]
   workflow_dispatch:
 
 jobs:

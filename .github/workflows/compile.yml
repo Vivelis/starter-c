@@ -1,8 +1,8 @@
 name: C/C++ CI
 
 on:
-  check_run:
-    types: [rerequested]
+  pull_request:
+    types: [opened]
   workflow_dispatch:
 jobs:
   build:
