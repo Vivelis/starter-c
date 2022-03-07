@@ -25,8 +25,7 @@ DEBUGBIN	=	debug
 TESTBIN		=	unit_test
 
 ## flags
-CFLAGS		=	-Wextra -Wall $(addprefix -I, $(INCLUDEPATH)) 	\
-				-lcsfml-graphics -lcsfml-audio -lcsfml-window -lcsfml-system
+CFLAGS		=	-Wextra -Wall $(addprefix -I, $(INCLUDEPATH))
 LDFLAGS		=	$(foreach lib, $(LIBS), $(addprefix -L, $(dir $(lib)))\
 				$(addprefix -l, $(subst lib,,$(basename $(notdir $(lib))))))
 DEBUGFLAGS	=	-g3
