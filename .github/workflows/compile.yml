@@ -2,7 +2,7 @@ name: C/C++ CI
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, reopened]
   workflow_dispatch:
 jobs:
   build:
