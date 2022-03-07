@@ -1,6 +1,9 @@
 name: NorMatrix
 
-on: [push]
+on:
+  check_run:
+    types: [rerequested]
+  workflow_dispatch:
 
 jobs:
   build:
