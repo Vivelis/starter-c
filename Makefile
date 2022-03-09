@@ -73,11 +73,11 @@ fclean: clean
 re: fclean all
 
 debug: CFLAGS += $(DEBUGFLAGS)
-debug: fclean lib $(OBJ) $(MAINOBJ)
+debug: fclean do_libs $(OBJ) $(MAINOBJ)
 	@$(CC) -o $(DEBUGBIN) $(OBJ) $(MAINOBJ) $(LDFLAGS) $(CFLAGS)
 	@echo -e "\e[1;36mFinished compiling $(DEBUGBIN) $@\e[0m"
 
-unit_tests: fclean lib $(OBJ)
+unit_tests: fclean do_libs $(OBJ)
 	@$(CC) -o $(TESTBIN) $(OBJ) $(TEST OBJ) $(LDFLAGS) $(CFLAGS) $(TESTFLAGS)
 	@echo -e "\e[1;36mFinished compiling $(TESTBIN) $@\e[0m"
 
