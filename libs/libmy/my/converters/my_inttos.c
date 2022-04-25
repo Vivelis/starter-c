@@ -9,7 +9,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-int my_intlen(int nbr)
+static int my_intlen(int nbr)
 {
     if (nbr == 0)
         return nbr;
@@ -37,12 +37,13 @@ char *my_inttos(int nbr)
     }
     if (nbr < 0)
         length++;
-    str = malloc(sizeof(char) * length);
+    str = malloc(sizeof(char) * (length + 1));
     my_memset(str, '0', length);
     if (nbr < 0) {
         str[length - 1] = '-';
         nbr *= -1;
     }
+    str[length] = '\0';
     str = rec_inttos(nbr, 0, str);
     str = my_revstr(str);
     return str;

@@ -558,6 +558,22 @@ EXAMPLES
     
 
 --------------------------------------------------------------------------------
+NAME
+    my_strndup - 
+
+SYNOPSIS
+    #include "lib/my/my.h"
+    
+    char *my_strndup(char const *src);
+
+DESCRIPTION
+
+
+RETURN
+
+
+EXAMPLES
+    
 
 --------------------------------------------------------------------------------
 

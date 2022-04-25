@@ -17,7 +17,9 @@ OBJ			=	$(SRC:.c=.o)
 MAINOBJ		=	$(MAIN:.c=.o)
 
 ## import lib options
-LIBS	=	sources/lib/libmy.a
+LIBS	=	$(addprefix libs/,	\
+			libmy/libmy.a		\
+			)
 
 ## name of the binaries
 EXEC		=	exec_name
@@ -84,4 +86,7 @@ unit_tests: fclean do_libs $(OBJ)
 run_tests: unit_tests
 	./$(TESTBIN)
 
-.PHONY:	all	do_libs	clean	fclean	re	debug	unit_tests	run_tests
+update_libmy:
+	./update_libmy
+
+.PHONY:	all	do_libs	clean	fclean	re	debug	unit_tests	run_tests	update_libmy
