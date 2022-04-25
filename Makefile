@@ -17,7 +17,9 @@ OBJ			=	$(SRC:.c=.o)
 MAINOBJ		=	$(MAIN:.c=.o)
 
 ## import lib options
-LIBS	=	sources/lib/libmy.a
+LIBS	=	$(addprefix libs/,	\
+			libmy/libmy.a		\
+			)
 
 ## name of the binaries
 EXEC		=	exec_name
@@ -73,15 +75,18 @@ fclean: clean
 re: fclean all
 
 debug: CFLAGS += $(DEBUGFLAGS)
-debug: fclean lib $(OBJ) $(MAINOBJ)
+debug: fclean do_libs $(OBJ) $(MAINOBJ)
 	@$(CC) -o $(DEBUGBIN) $(OBJ) $(MAINOBJ) $(LDFLAGS) $(CFLAGS)
 	@echo -e "\e[1;36mFinished compiling $(DEBUGBIN) $@\e[0m"
 
-unit_tests: fclean lib $(OBJ)
+unit_tests: fclean do_libs $(OBJ)
 	@$(CC) -o $(TESTBIN) $(OBJ) $(TEST OBJ) $(LDFLAGS) $(CFLAGS) $(TESTFLAGS)
 	@echo -e "\e[1;36mFinished compiling $(TESTBIN) $@\e[0m"
 
 run_tests: unit_tests
 	./$(TESTBIN)
 
-.PHONY:	all	do_libs	clean	fclean	re	debug	unit_tests	run_tests
+update_libmy:
+	./update_libmy
+
+.PHONY:	all	do_libs	clean	fclean	re	debug	unit_tests	run_tests	update_libmy

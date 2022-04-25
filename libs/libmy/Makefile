@@ -9,7 +9,7 @@
 LIB	=	libmy.a
 
 #copy path
-HDRDIR	=	../../includes
+HDRDIR	=	../includes
 
 #library sources
 SRC	=	my/math/my_compute_power_rec.c			\
@@ -23,8 +23,9 @@ SRC	=	my/math/my_compute_power_rec.c			\
 		my/my_put/my_putnbr.c					\
 		my/my_put/my_putstr.c					\
 		my/str_manipulation/my_revstr.c			\
+		my/str_manipulation/dup_nchar.c			\
 		my/str_manipulation/my_strcapitalize.c	\
-		my/str_manipulation/my_strncat.c	\
+		my/str_manipulation/my_strncat.c		\
 		my/str_manipulation/my_strcat.c			\
 		my/str_manipulation/my_strcmp.c			\
 		my/str_manipulation/my_strcpy.c			\
@@ -55,8 +56,7 @@ SRC	=	my/math/my_compute_power_rec.c			\
 		my/my_printf/my_printf_point.c			\
 		my/my_printf/my_printf_setflag.c		\
 		my/my_printf/my_printf_flag_detection.c
-HDR	=	headers/my.h	\
-		headers/printf_header.h
+HDR	=	headers/my.h
 
 #Compiler and Linker
 CC	= cc

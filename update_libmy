@@ -1,0 +1,14 @@
+#!/bin/bash
+LIB_PATH=./libs/libmy
+TMP_REPO=./libmy
+LIB_GIT=git@github.com:macgameur/libmy.git
+
+rm -rf $LIB_PATH
+printf "\e[00;33mlast lib cleened\n\e[00m"
+git clone $LIB_GIT $TMP_REPO
+printf "\e[00;33mnew lib cloned\n\e[00m"
+mv $TMP_REPO/lib $LIB_PATH
+printf "\e[00;33mnew lib placed\n\e[00m"
+rm -rf $TMP_REPO
+printf "\e[00;33mtemporary repos removed\n\e[00m"
+printf "\e[01;32mDone\n\e[00m"
