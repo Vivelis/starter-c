@@ -89,4 +89,5 @@ run_tests: unit_tests
 update_libmy:
 	./update_libmy
 
-.PHONY:	all	do_libs	clean	fclean	re	debug	unit_tests	run_tests	update_libmy
+.PHONY:	all	do_libs	clean	fclean	re	debug	unit_tests
+.PHONY: run_tests	update_libmy
