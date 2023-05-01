@@ -67,3 +67,6 @@ unit_test
 # headers
 includes/my.h
 includes/printf_header.h
+
+# tmp files
+.bash_history
